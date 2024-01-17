@@ -1,0 +1,26 @@
+:root {
+    --color-primario: #3498db;   /* Azul */
+    --color-secundario: #2ecc71; /* Verde */
+    --color-terciario: #333;     /* Gris oscuro o negro */
+    --color-destacado: #f39c12;  /* Naranja */
+    --color-fondo: #fff;         /* Blanco */
+  }
+  
+  body {
+    background-color: var(--color-fondo);
+    color: var(--color-terciario);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1, h2, h3 {
+    color: var(--color-primario);
+  }
+  
+  a {
+    color: var(--color-primario);
+  }
+  
+  a:hover {
+    color: var(--color-destacado);
+  }
+  
