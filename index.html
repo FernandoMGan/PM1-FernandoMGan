@@ -1,16 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soy Henry - Homework - Modulo 01 - Fernando Gan - PT19A</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/index.js"></script>
+  </head>
+  <style></style>
+  <body>
+    <br />
+    <header>
+      <h1>Fernando Martin Gan - PT19A</h1>
+      <h3>Mi pagina web, para modulo 1 de Soy Henry</h3>
+    </header>
+    <main>
+      <section>
+        <article class="sub-cntd">
+          <h2>¿ Quien Es Fernando Martin Gan ?</h2>
+          <hr />
+          <h3>
+            Desarrollador, creativo, apasionado por la simplicidad, la
+            curiosidad y la constante mejora. Cocino ideas, estudio
+            oportunidades y saboreo desafíos bien pagos. Profesional versátil
+            que encuentra la armonía entre trabajo, estudio y la búsqueda
+            incansable del éxito. <br />
+            💼📚🍽️
+          </h3>
+        </article>
+        <article class="sub-cntd">
+          <h2>Mis Tecnologias</h2>
+          <hr />
+          <article class="tecnos">
+            <div>
+              <img src="./assets/techs/HTML5.png" alt="Html" title="Html" />
+              <p><figcaption>HTML 5</figcaption></p>
+            </div>
+            <div>
+              <img src="./assets/techs/CSS3.png" alt="Css" title="Css" />
+              <p><figcaption>CSS 3</figcaption></p>
+            </div>
+            <div>
+              <img src="./assets/techs/js.png" alt="Js" title="Js" />
+              <p><figcaption>Js</figcaption></p>
+            </div>
+            <div>
+              <img
+                src="./assets/techs/SQL_Server.png"
+                alt="Sql"
+                title="Sql Server"
+              />
+              <p><figcaption>SQL</figcaption></p>
+            </div>
+            <div>
+              <img src="./assets/techs/React.png" alt="React" title="React" />
+              <p><figcaption>React</figcaption></p>
+            </div>
+          </article>
+        </article>
+      </section>
+      <section class="cntd-activities">
+        <article>
+          <h2>Mis actividades favoritas</h2>
+          <hr />
+        </article>
+        <article>
+          <form action="">
+            <div class="fav-section">
+              <div class="fav-section-it">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required />
+                <br />
+                <label for="descripcion">Descripción:</label>
+                <textarea
+                  id="descripcion"
+                  name="descripcion"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="fav-section-it">
+                <label for="url">URL:</label>
+                <input type="text" id="url" name="url" required />
+                <br />
 
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js"></script>
-</head>
-<body>
-    <h1>(En H1) Soy Henry - Homework - Modulo 01 - Fernando Gan - PT19A</h1>
-    <h2>(En H2) Proyecto de ejemplo</h2>
-    <h3>(En H3) <a href="http://google.com.ar">Ir a google</a></h3>
-</body>
+                <div class="fav-section-it-btns">
+                  <button type="submit" name="reset">Agregar Actividad</button>
+                  <button type="reset" name="submit">Limpiar Formulario</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </article>
+      </section>
+      <section></section>
+    </main>
+    <footer>
+      <h3>
+        <span
+          >Todos los derechos reservados a Bpo Change
+          (www.bpochange.com.ar)</span
+        >
+      </h3>
+    </footer>
+    <br />
+  </body>
 </html>
