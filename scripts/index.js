@@ -60,11 +60,9 @@ class ActivityRepository {
 
   // EXTRA CREDIT: Método para eliminar una actividad por su id
   deleteActivity(id) {
-    alert(`Listo para borrar actividad con ID: ${id}`);
-  
     for (let i = 0; i < this.activities.length; i++) {
       if (this.activities[i].id === id) {
-        alert(`Borrando actividad con ID: ${id}`);
+        alert(`Actividad con ID: ${id} Eliminada.`);
         this.activities.splice(i, 1);
         break; // Detener el bucle una vez que se ha eliminado la actividad
       }
@@ -126,7 +124,7 @@ function fncCreateActividad(event) {
 
     // Utilizar window.confirm para mostrar un cuadro de confirmación
     const confirmacion = window.confirm(
-      `Esta seguro de eliminar esta actividad \n\n prox ID : ${nextID} \n titulo : ${vtitulo} \n titulo : ${vurl} \n titulo : ${vdescripcion} ?`
+      `Esta seguro de eliminar esta actividad \n\n ID :   ${nextID} \n Actividad :   ${vtitulo} \n Url : ${vurl} \n Descripcion :   ${vdescripcion} ?`
     );
 
     if (confirmacion) {
@@ -149,7 +147,7 @@ function imprimirActividades() {
 
   // Iterar sobre las actividades y agregarlas al string
   activityRepository.activities.forEach(activity => {
-    listAllActivity += `id: ${activity.id},      Actividad: ${activity.title},      Descripcion: ${activity.imgUrl}\n`;
+    listAllActivity += `ID : ${activity.id} -->:      ${activity.title}     -->: ${activity.imgUrl}\n`;
   });
 
   // Mostrar el resultado
