@@ -60,9 +60,15 @@ class ActivityRepository {
 
   // EXTRA CREDIT: Método para eliminar una actividad por su id
   deleteActivity(id) {
-    this.activities = this.activities.filter((activity) => activity.id !== id);
-    // console.log(`Se esta eliminando la actividad con id n° ${id}`);
-    // alert(`Se esta eliminando la actividad con id n° ${id}`);
+    alert(`Listo para borrar actividad con ID: ${id}`);
+  
+    for (let i = 0; i < this.activities.length; i++) {
+      if (this.activities[i].id === id) {
+        alert(`Borrando actividad con ID: ${id}`);
+        this.activities.splice(i, 1);
+        break; // Detener el bucle una vez que se ha eliminado la actividad
+      }
+    }
   }
 }
 
@@ -126,10 +132,6 @@ function fncCreateActividad(event) {
     if (confirmacion) {
       activityRepository.deleteActivity(actividadId);
       nuevaCaja.remove();
-      // alert(`La actividad con ID ${actividadId} ha sido eliminada.`);
-      activityRepository.deleteActivity(actividadId);
-    } else {
-      // alert(`La actividad con ID ${actividadId} no ha sido eliminada.`);
     }
   });
 
@@ -140,4 +142,16 @@ function fncCreateActividad(event) {
   // alert(
   //   `Ustea creando una actividad con estas caracteristicas, \n prox ID : ${nextID} \n titulo : ${vtitulo} \n titulo : ${vurl} \n titulo : ${vdescripcion}`
   // );
+}
+function imprimirActividades() {
+  // Crear la variable listAllActivity
+  let listAllActivity = "Lista de Actividades   \n";
+
+  // Iterar sobre las actividades y agregarlas al string
+  activityRepository.activities.forEach(activity => {
+    listAllActivity += `id: ${activity.id},      Actividad: ${activity.title},      Descripcion: ${activity.imgUrl}\n`;
+  });
+
+  // Mostrar el resultado
+  alert(listAllActivity);
 }
