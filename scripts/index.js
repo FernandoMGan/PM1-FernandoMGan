@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 // Clase Activity
 class Activity {
   constructor(id, title, description, imgUrl) {
@@ -26,8 +27,8 @@ class Activity {
   }
 }
 
-// Clase ActivityRepository (cambié el nombre para evitar conflictos)
-class ActivityRepository {
+// Clase Repository (cambié el nombre para evitar conflictos)
+class Repository {
   constructor() {
     this.activities = [];
   }
@@ -86,8 +87,8 @@ function fncCreateActividad(event) {
     return;
   }
 
-  let nextID = activityRepository.getActivND();
-  activityRepository.createActivity(nextID, vtitulo, vurl, vdescripcion);
+  let nextID = repository.getActivND();
+  repository.createActivity(nextID, vtitulo, vurl, vdescripcion);
 
   const trjActivItms = document.querySelector(".trj-activ-itms");
 
@@ -128,7 +129,7 @@ function fncCreateActividad(event) {
     );
 
     if (confirmacion) {
-      activityRepository.deleteActivity(actividadId);
+      repository.deleteActivity(actividadId);
       nuevaCaja.remove();
     }
   });
@@ -146,7 +147,7 @@ function imprimirActividades() {
   let listAllActivity = "Lista de Actividades   \n";
 
   // Iterar sobre las actividades y agregarlas al string
-  activityRepository.activities.forEach(activity => {
+  repository.activities.forEach(activity => {
     listAllActivity += `ID : ${activity.id} -->:      ${activity.title}     -->: ${activity.imgUrl}\n`;
   });
 
